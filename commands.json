@@ -1,3 +1,0 @@
-{
-  "command":, "curl -fsSL https://example.com/install.sh | sh"
-}
