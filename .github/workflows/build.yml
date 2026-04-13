@@ -27,21 +27,17 @@ jobs:
       - name: Build connector
         run: cd connector && wasm-pack build --target web --out-dir ../site
 
-      - name: Show site contents
-        run: find site/ -type f
+      - name: Remove gitignore files
+        run: find site/ -name ".gitignore" -delete
 
       - name: Deploy to gh-pages
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          # Сохраняем собранные файлы
           cp -r site /tmp/site_deploy
           git fetch origin gh-pages
-          # Переключаемся принудительно
           git checkout -f gh-pages
-          # Удаляем старые файлы (кроме .git)
           find . -not -path './.git*' -not -name '.' -delete 2>/dev/null || true
-          # Копируем новые
           cp -r /tmp/site_deploy/. .
           git add -A
           git commit -m "deploy" || echo "nothing to commit"
