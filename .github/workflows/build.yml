@@ -32,9 +32,13 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git fetch origin gh-pages
+          # Копируем site во временную папку вне репо
+          cp -r site /tmp/site_deploy
           git checkout gh-pages
-          cp -r site/* .
-          rm -rf site/
+          # Очищаем ветку полностью
+          git rm -rf . || true
+          # Копируем только нужные файлы
+          cp -r /tmp/site_deploy/* .
           git add .
           git commit -m "deploy" || echo "nothing to commit"
           git push origin gh-pages
