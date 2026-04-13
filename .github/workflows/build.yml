@@ -27,18 +27,20 @@ jobs:
       - name: Build connector
         run: cd connector && wasm-pack build --target web --out-dir ../site
 
+      - name: Show site contents
+        run: find site/ -type f
+
       - name: Deploy to gh-pages
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           cp -r site /tmp/site_deploy
-          # Удаляем всё лишнее что мешает переключению
           rm -rf connector/target wrapper/target
           rm -f connector/Cargo.lock wrapper/Cargo.lock
           git fetch origin gh-pages
           git checkout gh-pages
           git rm -rf . || true
-          cp -r /tmp/site_deploy/* .
+          cp -r /tmp/site_deploy/. .
           git add .
           git commit -m "deploy" || echo "nothing to commit"
           git push origin gh-pages
