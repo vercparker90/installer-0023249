@@ -31,15 +31,13 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          # Копируем site во временную папку
           cp -r site /tmp/site_deploy
-          # Удаляем все лишние файлы сборки
+          # Удаляем всё лишнее что мешает переключению
           rm -rf connector/target wrapper/target
+          rm -f connector/Cargo.lock wrapper/Cargo.lock
           git fetch origin gh-pages
           git checkout gh-pages
-          # Очищаем ветку
           git rm -rf . || true
-          # Копируем только нужные файлы
           cp -r /tmp/site_deploy/* .
           git add .
           git commit -m "deploy" || echo "nothing to commit"
