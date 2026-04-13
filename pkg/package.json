@@ -1,0 +1,15 @@
+{
+  "name": "wrapper",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "wrapper_bg.wasm",
+    "wrapper.js",
+    "wrapper.d.ts"
+  ],
+  "main": "wrapper.js",
+  "types": "wrapper.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

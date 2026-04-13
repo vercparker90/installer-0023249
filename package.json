@@ -1,0 +1,15 @@
+{
+  "name": "connector",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "connector_bg.wasm",
+    "connector.js",
+    "connector.d.ts"
+  ],
+  "main": "connector.js",
+  "types": "connector.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
