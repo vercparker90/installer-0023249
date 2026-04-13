@@ -1,0 +1,10 @@
+/home/runner/work/installer-0023249/installer-0023249/connector/target/wasm32-unknown-unknown/release/deps/js_sys-ff1eb9759c630750.d: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/lib.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/mod.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/queue.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/task/singlethread.rs
+
+/home/runner/work/installer-0023249/installer-0023249/connector/target/wasm32-unknown-unknown/release/deps/libjs_sys-ff1eb9759c630750.rlib: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/lib.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/mod.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/queue.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/task/singlethread.rs
+
+/home/runner/work/installer-0023249/installer-0023249/connector/target/wasm32-unknown-unknown/release/deps/libjs_sys-ff1eb9759c630750.rmeta: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/lib.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/mod.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/queue.rs /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/task/singlethread.rs
+
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/lib.rs:
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/mod.rs:
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/queue.rs:
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.95/src/futures/task/singlethread.rs:
