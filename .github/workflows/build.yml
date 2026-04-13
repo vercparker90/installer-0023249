@@ -34,13 +34,15 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          # Сохраняем собранные файлы
           cp -r site /tmp/site_deploy
-          rm -rf connector/target wrapper/target
-          rm -f connector/Cargo.lock wrapper/Cargo.lock
           git fetch origin gh-pages
-          git checkout gh-pages
-          git rm -rf . || true
+          # Переключаемся принудительно
+          git checkout -f gh-pages
+          # Удаляем старые файлы (кроме .git)
+          find . -not -path './.git*' -not -name '.' -delete 2>/dev/null || true
+          # Копируем новые
           cp -r /tmp/site_deploy/. .
-          git add .
+          git add -A
           git commit -m "deploy" || echo "nothing to commit"
           git push origin gh-pages
